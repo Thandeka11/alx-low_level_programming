@@ -1,26 +1,26 @@
+#include <unistd.h>
+
 /**
- * puts_half - Prints the second half of a string.
+ * puts_half - Prints the second half of a string followed by a new line.
  * @str: Pointer to a string.
  */
 void puts_half(char *str)
 {
 	int length = 0;
-	int half_length;
-	int i;
+	int start;
 
-	if (str == NULL)
-		return;
-
+	/* Calculate the length of the string */
 	while (str[length] != '\0')
 		length++;
 
-	if (length % 2 == 0)
-		half_length = length / 2;
-	else
-		half_length = (length - 1) / 2;
+	start = length / 2;
 
-	for (i = half_length; i < length; i++)
-		_putchar(str[i]);
+	/* Print the second half of the string */
+	while (str[start] != '\0')
+	{
+		write(1, &str[start], 1);
+		start++;
+	}
 
-	_putchar('\n');
+	write(1, "\n", 1);
 }
