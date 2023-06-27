@@ -1,6 +1,6 @@
 /**
- * _strcpy - Copies the string pointed to by src to the buffer pointed to
- * by dest.
+ * _strcpy - Copies the string pointed to by src to the buffer pointe
+ * to by dest.
  * @dest: Pointer to the destination buffer.
  * @src: Pointer to the source buffer.
  *
@@ -19,5 +19,6 @@ char *_strcpy(char *dest, char *src)
 
 	*dest = '\0';
 
-	return start;
+	return (start);
 }
+
